@@ -1,0 +1,940 @@
+/*
+ - 1366x625 resolution -
+ - only sub pages responsive for mobile, tablets or bigger resolution monitors -
+*/
+@font-face {
+  font-family: "Gotham-ExtraLight";
+  /*a name to be used later*/
+  src: url("../font/Gotham-ExtraLight.otf");
+  /*URL to font*/
+}
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Gotham-ExtraLight";
+}
+
+section {
+  display: grid;
+  width: 100%;
+  /*100%1349px*/
+  height: 100%;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 52.5px);
+}
+
+#pageA {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 13;
+}
+
+#wow {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 13;
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  /* ANIMATION */
+  top: 0;
+  width: 100%;
+  z-index: 0;
+  height: 100%;
+  background-size: calc(100% + 50px);
+}
+
+#logo {
+  height: 70%;
+  width: 70%;
+  display: grid;
+  grid-column-start: 4;
+  grid-column-end: 12;
+  grid-row-start: 2;
+  grid-row-end: 11;
+  background-image: url("../img/logo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
+
+#text {
+  font-family: "Gotham-ExtraLight";
+  color: #ffffffca;
+  position: absolute;
+  top: 59.5%;
+  left: 34.2%;
+  border-top: 1px solid #ffffff6b;
+  padding: 15px;
+  text-transform: uppercase;
+}
+
+#arrowa {
+  display: grid;
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 12;
+  grid-row-end: 13;
+  position: absolute;
+  left: 45.1%;
+  top: 93%;
+  z-index: 200;
+}
+
+#arrowa:hover {
+  transform: scale(0.8);
+}
+
+#pageB {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 13;
+}
+
+#text3 {
+  font-family: "Gotham-ExtraLight";
+  display: grid;
+  grid-column-start: 6;
+  grid-column-end: 9;
+  grid-row-start: 12;
+  grid-row-end: 13;
+  position: relative;
+  color: #ffffff;
+  font-size: 13px;
+  top: -20px;
+  left: -5%;
+  letter-spacing: 1px;
+}
+
+#arrow {
+  display: grid;
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 12;
+  grid-row-end: 13;
+  position: absolute;
+  left: 45.1%;
+  top: 193%;
+  z-index: 200;
+}
+
+#arrow:hover {
+  transform: scale(0.8);
+}
+
+#whatisastrology {
+  font-family: "Gotham-ExtraLight";
+  color: #ffffffca;
+  position: absolute;
+  left: 24%;
+  bottom: -20%;
+  letter-spacing: 6px;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+#whatisdescription {
+  font-family: "Gotham-ExtraLight";
+  color: #ffffffca;
+  position: absolute;
+  left: 20%;
+  bottom: -72%;
+  text-align: center;
+}
+
+#aquarius {
+  height: 120px;
+  position: absolute;
+  left: 11%;
+  bottom: -70%;
+}
+
+#pisces {
+  height: 120px;
+  position: absolute;
+  left: 15%;
+  bottom: -89%;
+}
+
+#capricorn {
+  height: 120px;
+  position: absolute;
+  left: 77%;
+  bottom: -85%;
+}
+
+#aries {
+  height: 105px;
+  position: absolute;
+  left: 23%;
+  bottom: -90%;
+  transform: rotate(-10deg);
+}
+
+#sagittarius {
+  height: 110px;
+  position: absolute;
+  left: 67%;
+  bottom: -89%;
+  transform: rotate(-10deg);
+}
+
+#scorpio {
+  height: 110px;
+  position: absolute;
+  left: 59%;
+  bottom: -92%;
+  transform: rotate(-10deg);
+}
+
+#gemini {
+  height: 110px;
+  position: absolute;
+  left: 78%;
+  bottom: -52%;
+  transform: rotate(-10deg);
+}
+
+#cancer {
+  height: 110px;
+  position: absolute;
+  left: 65%;
+  bottom: -46%;
+}
+
+#leo {
+  height: 110px;
+  position: absolute;
+  left: 50%;
+  bottom: -47%;
+}
+
+#libra {
+  height: 125px;
+  position: absolute;
+  left: 38%;
+  bottom: -47%;
+}
+
+#taurus {
+  height: 120px;
+  position: absolute;
+  left: 27%;
+  bottom: -47%;
+}
+
+#virgo {
+  height: 120px;
+  position: absolute;
+  left: 14%;
+  bottom: -47%;
+}
+
+.logo {
+  height: 150px;
+  position: absolute;
+  left: 1%;
+  bottom: -26%;
+}
+
+.logo:hover {
+  filter: blur(1px);
+}
+
+#pageC {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 13;
+}
+
+#arrowas {
+  display: grid;
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 12;
+  grid-row-end: 13;
+  position: absolute;
+  left: 45.1%;
+  top: 293%;
+  z-index: 200;
+}
+
+#arrowas:hover {
+  transform: scale(0.8);
+}
+
+#wheel {
+  z-index: 100;
+  grid-column: 4/10;
+  grid-row: 1/20;
+  margin-left: 67px;
+  margin-top: 47px;
+}
+
+.circle-aries {
+  background-image: url(../img/aries.svg);
+  z-index: 100;
+  background-repeat: no-repeat;
+  transition: 0.5s ease;
+  position: relative;
+  top: 150px;
+  height: 70px;
+  left: 465px;
+  text-decoration: none;
+}
+
+.circle-aries p {
+  position: relative;
+  opacity: 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 10px;
+  transition: 0.5s ease;
+}
+
+.circle-aries:hover {
+  background-image: none;
+}
+
+.circle-aries p:hover {
+  opacity: 1;
+}
+
+.circle-pisces {
+  background-image: url(../img/pisces.svg);
+  z-index: 100;
+  background-repeat: no-repeat;
+  transition: 0.5s ease;
+  position: relative;
+  top: 220px;
+  height: 70px;
+  left: 340px;
+  text-decoration: none;
+}
+
+.circle-pisces p {
+  position: relative;
+  opacity: 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 10px;
+  transition: 0.5s ease;
+  left: -27px;
+  top: 15px;
+}
+
+.circle-pisces:hover {
+  background-image: none;
+}
+
+.circle-pisces p:hover {
+  opacity: 1;
+}
+
+.circle-taurus {
+  background-image: url(../img/taurus.svg);
+  z-index: 100;
+  background-repeat: no-repeat;
+  transition: 0.5s ease;
+  position: relative;
+  top: 85px;
+  height: 70px;
+  left: 345px;
+  text-decoration: none;
+}
+
+.circle-taurus p {
+  position: relative;
+  opacity: 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 10px;
+  transition: 0.5s ease;
+  left: -10px;
+  top: 15px;
+}
+
+.circle-taurus:hover {
+  background-image: none;
+}
+
+.circle-taurus p:hover {
+  opacity: 1;
+}
+
+.circle-gemini {
+  background-image: url(../img/gemini.svg);
+  z-index: 100;
+  background-repeat: no-repeat;
+  transition: 0.5s ease;
+  position: relative;
+  top: 85px;
+  height: 70px;
+  left: -340px;
+  text-decoration: none;
+}
+
+.circle-gemini p {
+  position: relative;
+  opacity: 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 10px;
+  transition: 0.5s ease;
+  left: -10px;
+  top: 15px;
+}
+
+.circle-gemini:hover {
+  background-image: none;
+}
+
+.circle-gemini p:hover {
+  opacity: 1;
+}
+
+.circle-cancer {
+  background-image: url(../img/cancer.svg);
+  z-index: 100;
+  background-repeat: no-repeat;
+  transition: 0.5s ease;
+  position: relative;
+  top: 125px;
+  height: 70px;
+  left: -350px;
+  text-decoration: none;
+}
+
+.circle-cancer p {
+  position: relative;
+  opacity: 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 10px;
+  transition: 0.5s ease;
+  left: -20px;
+  top: 15px;
+}
+
+.circle-cancer:hover {
+  background-image: none;
+}
+
+.circle-cancer p:hover {
+  opacity: 1;
+}
+
+.circle-leo {
+  background-image: url(../img/leo.svg);
+  z-index: 100;
+  background-repeat: no-repeat;
+  transition: 0.5s ease;
+  position: relative;
+  top: 215px;
+  height: 70px;
+  left: -440px;
+  text-decoration: none;
+}
+
+.circle-leo p {
+  position: relative;
+  opacity: 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 10px;
+  transition: 0.5s ease;
+  left: -5px;
+  top: 15px;
+}
+
+.circle-leo:hover {
+  background-image: none;
+}
+
+.circle-leo p:hover {
+  opacity: 1;
+}
+
+.circle-aquarius {
+  background-image: url(../img/aquarius.svg);
+  z-index: 100;
+  background-repeat: no-repeat;
+  transition: 0.5s ease;
+  position: relative;
+  top: 255px;
+  height: 70px;
+  left: 460px;
+  text-decoration: none;
+}
+
+.circle-aquarius p {
+  position: relative;
+  opacity: 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 10px;
+  transition: 0.5s ease;
+  left: -32px;
+  top: 15px;
+}
+
+.circle-aquarius:hover {
+  background-image: none;
+}
+
+.circle-aquarius p:hover {
+  opacity: 1;
+}
+
+.circle-capricorn {
+  background-image: url(../img/capricorn.svg);
+  z-index: 100;
+  background-repeat: no-repeat;
+  transition: 0.5s ease;
+  position: relative;
+  top: 330px;
+  height: 70px;
+  left: 380px;
+  text-decoration: none;
+}
+
+.circle-capricorn p {
+  position: relative;
+  opacity: 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 10px;
+  transition: 0.5s ease;
+  left: -10px;
+  top: 20px;
+}
+
+.circle-capricorn:hover {
+  background-image: none;
+}
+
+.circle-capricorn p:hover {
+  opacity: 1;
+}
+
+.circle-sagittarius {
+  background-image: url(../img/sagittarius.svg);
+  z-index: 100;
+  background-repeat: no-repeat;
+  transition: 0.5s ease;
+  position: relative;
+  top: 373px;
+  height: 70px;
+  left: 364px;
+  text-decoration: none;
+}
+
+.circle-sagittarius p {
+  position: relative;
+  opacity: 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 9px;
+  transition: 0.5s ease;
+  left: -26px;
+  top: 30px;
+}
+
+.circle-sagittarius:hover {
+  background-image: none;
+}
+
+.circle-sagittarius p:hover {
+  opacity: 1;
+}
+
+.circle-scorpio {
+  background-image: url(../img/scorpio.svg);
+  z-index: 100;
+  background-repeat: no-repeat;
+  transition: 0.5s ease;
+  position: relative;
+  top: 373px;
+  height: 70px;
+  left: -340px;
+  text-decoration: none;
+}
+
+.circle-scorpio p {
+  position: relative;
+  opacity: 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 10px;
+  transition: 0.5s ease;
+  left: -15px;
+  top: 26px;
+}
+
+.circle-scorpio:hover {
+  background-image: none;
+}
+
+.circle-scorpio p:hover {
+  opacity: 1;
+}
+
+.circle-libra {
+  background-image: url(../img/libra.svg);
+  z-index: 100;
+  background-repeat: no-repeat;
+  transition: 0.5s ease;
+  position: relative;
+  top: 335px;
+  height: 75px;
+  left: -360px;
+  text-decoration: none;
+}
+
+.circle-libra p {
+  position: relative;
+  opacity: 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 10px;
+  transition: 0.5s ease;
+  left: -24px;
+  top: 10px;
+}
+
+.circle-libra:hover {
+  background-image: none;
+}
+
+.circle-libra p:hover {
+  opacity: 1;
+}
+
+.circle-virgo {
+  background-image: url(../img/virgo.svg);
+  z-index: 100;
+  background-repeat: no-repeat;
+  transition: 0.5s ease;
+  position: relative;
+  top: 251px;
+  height: 70px;
+  left: -430px;
+  text-decoration: none;
+}
+
+.circle-virgo p {
+  position: relative;
+  opacity: 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 10px;
+  transition: 0.5s ease;
+  left: -20px;
+  top: 18px;
+}
+
+.circle-virgo:hover {
+  background-image: none;
+}
+
+.circle-virgo p:hover {
+  opacity: 1;
+}
+
+/*PAGE DDDDDDDDDDDDDDD*/
+#pageD {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 13;
+}
+
+#whattt {
+  font-family: "Gotham-ExtraLight";
+  color: #ffffffca;
+  position: absolute;
+  letter-spacing: 6px;
+  font-size: 50px;
+  text-transform: uppercase;
+  bottom: -220%;
+  left: 33%;
+}
+
+#whatttt {
+  font-family: "Gotham-ExtraLight";
+  color: #ffffffca;
+  position: absolute;
+  bottom: -255%;
+  left: 20%;
+  text-align: center;
+}
+
+#yy {
+  font-family: "Gotham-ExtraLight";
+  text-transform: uppercase;
+  color: #ffffff;
+  position: absolute;
+  bottom: -274%;
+  left: 32%;
+  text-align: center;
+  border-top: 1px solid #ffffff46;
+  border-bottom: 1px solid #ffffff46;
+  padding: 3px;
+}
+
+#kk {
+  font-family: "Gotham-ExtraLight";
+  text-transform: uppercase;
+  color: #ffffff;
+  position: absolute;
+  bottom: -274%;
+  left: 42%;
+  text-align: center;
+  border-top: 1px solid #ffffff46;
+  border-bottom: 1px solid #ffffff46;
+  padding: 3px;
+}
+
+#zz {
+  font-family: "Gotham-ExtraLight";
+  text-transform: uppercase;
+  color: #ffffff;
+  position: absolute;
+  bottom: -274%;
+  left: 51%;
+  text-align: center;
+  border-top: 1px solid #ffffff46;
+  border-bottom: 1px solid #ffffff46;
+  padding: 3px;
+}
+
+#nn {
+  font-family: "Gotham-ExtraLight";
+  text-transform: uppercase;
+  color: #ffffff;
+  position: absolute;
+  bottom: -274%;
+  left: 61%;
+  text-align: center;
+  border-top: 1px solid #ffffff46;
+  border-bottom: 1px solid #ffffff46;
+  padding: 3px;
+}
+
+#yylogo {
+  position: absolute;
+  bottom: -290%;
+  left: 32.5%;
+}
+
+#kklogo {
+  position: absolute;
+  bottom: -290%;
+  left: 41.5%;
+}
+
+#zzlogo {
+  position: absolute;
+  bottom: -290%;
+  left: 50.5%;
+}
+
+#nnlogo {
+  position: absolute;
+  bottom: -290%;
+  left: 60.5%;
+}
+
+#arrowford {
+  display: grid;
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 12;
+  grid-row-end: 13;
+  position: absolute;
+  left: 45.1%;
+  top: 393%;
+  z-index: 200;
+}
+
+#arrowford:hover {
+  transform: scale(0.8);
+}
+
+#pageE {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 13;
+}
+
+#Contact {
+  font-size: 50px;
+  text-transform: uppercase;
+  bottom: -325%;
+  left: 40%;
+  color: #ffffff;
+  z-index: 100;
+  position: absolute;
+}
+
+.phone {
+  position: absolute;
+  bottom: -392%;
+  left: 34.5%;
+}
+
+.phone:hover {
+  filter: blur(1px);
+}
+
+.email {
+  position: absolute;
+  bottom: -391.5%;
+  left: 56%;
+}
+
+.email:hover {
+  filter: blur(1px);
+}
+
+.youtube {
+  position: absolute;
+  bottom: -356%;
+  left: 66.2%;
+}
+
+.youtube:hover {
+  filter: blur(1px);
+}
+
+#text1 {
+  position: absolute;
+  bottom: -396%;
+  left: 32.2%;
+  color: #ffffff;
+}
+
+#emailas {
+  position: absolute;
+  bottom: -395.5%;
+  left: 53.5%;
+  color: #ffffff;
+}
+
+#text8 {
+  position: absolute;
+  bottom: -360%;
+  left: 66.2%;
+  color: #ffffff;
+}
+
+.logotipas {
+  position: absolute;
+  top: 408.5%;
+}
+
+.logotipas:hover {
+  filter: blur(1px);
+}
+
+.fbicon {
+  position: absolute;
+  bottom: -356.5%;
+  left: 22.2%;
+  color: #ffffff;
+}
+
+.fbicon:hover {
+  filter: blur(1px);
+}
+
+.igicon {
+  position: absolute;
+  bottom: -357%;
+  left: 45.4%;
+  color: #ffffff;
+}
+
+.igicon:hover {
+  filter: blur(1px);
+}
+
+#fb {
+  position: absolute;
+  bottom: -360.5%;
+  left: 20.2%;
+  color: #ffffff;
+}
+
+#ig {
+  position: absolute;
+  bottom: -360.5%;
+  left: 43.4%;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 1369px) and (max-width: 1920px) {
+  #logo {
+    background-image: url("../img/logo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 26%;
+    top: 11%;
+    width: 45%;
+  }
+
+  #text {
+    font-family: "Gotham-ExtraLight";
+    color: #ffffffca;
+    position: absolute;
+    top: 61.5%;
+    left: 34.7%;
+    border-top: 1px solid #ffffff6b;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+
+  #arrowa {
+    position: absolute;
+    left: 46.1%;
+    top: 80%;
+    z-index: 200;
+  }
+}
+/*
+@media screen and ( max-width: 400px)
+{
+    section
+    {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        background-color: rgb(40, 54, 49);
+
+    }
+    #pageA
+    {
+        width: 50%;
+        background-color: blue;
+    }
+}
+*/
+
+/*# sourceMappingURL=stylae.css.map */

@@ -1,0 +1,467 @@
+
+
+
+// - 1366x625 resolution for main page -
+// - sub pages responsive for mobile, tablets or bigger resolution monitors -
+
+
+@font-face {
+    font-family: 'Gotham-ExtraLight'; /*a name to be used later*/
+    src: url('../font/Gotham-ExtraLight.otf'); /*URL to font*/
+}
+$font-stack: 'Gotham-ExtraLight';
+body {
+    background-image: url(../img/background.jpg);
+    top:0;
+    width:100%;
+    z-index:0;
+    height:100%;
+    background-size: calc(100% + 50px);
+    color: #ffffff;
+   
+    background-attachment: fixed;
+    font-family: $font-stack;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 200px 1250px 400px;
+    grid-template-areas: 
+    "hd hd hd hd hd hd hd hd hd hd hd hd"
+    "mn mn mn mn mn mn mn mn mn mn mn mn"
+    "ft ft ft ft ft ft ft ft ft ft ft ft"
+}
+header {
+    grid-area: hd;
+
+}
+.logo {
+    height: 150px;
+    position: fixed;
+    top: 5%;
+   
+}
+
+.logo:hover {
+ filter: blur(1px);
+}
+#title
+{
+position: absolute;
+ font-size: 40px;
+ left: 45%;
+ top: 1%;
+}
+#date {
+position: absolute;
+ font-size: 30px;
+ left: 42%;
+ top: 15%;
+ color: #ffffff;
+ border-top:  #ffffff91 inset 2px;
+ padding: 10px;
+}
+#svg {
+    height: 350px;
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    opacity: 0.3;
+}
+ main
+ {
+     grid-area: mn;
+
+ }
+.yt-title {
+    top: 70%;
+    left: 34%;
+    font-size: 30px;
+}
+ .youtube
+ {
+     position: absolute;
+     left: 24%;
+     top: 90%;
+     border: #ffffff solid 1px;
+     z-index: 300;
+     margin-bottom: -4px;
+  }
+.youtube iframe {
+    height: 409.5px;
+    width: 728px;
+    z-index: 300;
+    margin-bottom: -4px;
+}
+.borderbuttom {
+    z-index: 100;
+    height: 100px;
+    position: absolute;
+    top: 150%;
+    left: 25%;
+}
+.borderleft {
+    z-index: 100;
+    height: 200px;
+    position: absolute;
+    top: 115%;
+    left: 20%;
+}
+.bordercorner {
+    z-index: 100;
+    height: 100px;
+    position: absolute;
+    top: 85%;
+    left: 24%;
+}
+.bordertop {
+    z-index: 100;
+    height: 100px;
+    position: absolute;
+    top: 83%;
+    left: 51%;
+}
+.borderbuttom-r {
+    z-index: 100;
+    height: 100px;
+    position: absolute;
+    top: 147%;
+    left: 67%;
+}
+.borderright {
+    z-index: 100;
+    height: 150px;
+    position: absolute;
+    top: 110%;
+    left: 75.5%;
+}
+footer {
+    grid-area: ft;
+}
+img {
+    position: absolute;
+}
+.more-info {
+    top: 170%;
+    left: 22%;
+    font-size: 25px;
+    opacity: 0.6;
+}
+p {
+    position: absolute;
+}
+@mixin font-size ($Fsize, $pT, $pL, $borderB, $borderT, $paddingTB) {
+    font-size: $Fsize;
+    top: $pT;
+    left: $pL;
+    border-bottom: $borderB;
+    border-top: $borderT;
+    padding: $paddingTB;
+}
+.title-s {
+  @include font-size(25px, 185%, 22%, #ffffff91 solid 1px, #ffffff91 solid 1px, 5px);
+}
+.title-e {
+    @include font-size (25px, 185%, 50%, #ffffff91 solid 1px, #ffffff91 solid 1px, 5px);
+}
+.title-p {
+    @include font-size(25px, 185%, 77%,#ffffff91 solid 1px, #ffffff91 solid 1px, 5px);
+}
+.text-s {
+    @include font-size(20px, 235%, 14%,  #ffffff91 solid 1px, #ffffff91 solid 1px, 10px);
+}
+.text-e {
+    @include font-size(25px, 235%, 52%,  #ffffff91 solid 1px, #ffffff91 solid 1px, 5px);
+}
+.text-p {
+    @include font-size(25px, 235%, 77%,  #ffffff91 solid 1px, #ffffff91 solid 1px, 5px);
+}
+
+
+
+@mixin position ($imgT, $imgL, $imgH) {
+    height: $imgH;
+    top: $imgT;
+    left: $imgL;
+}
+.symbol {
+    @include position (205%, 16%, 150px);
+}
+.element {
+    @include position (205%, 47%, 150px);
+}
+.planet {
+    @include position (205%, 74%, 150px);
+}
+@mixin text-position ($posT, $posL, $Sfont, $imgH) {
+    top: $posT;
+    left: $posL;
+    height: $imgH;
+    font-size: $Sfont;
+}
+.strenghts {
+    @include text-position(270%, 9%, 20px, 0);
+}
+.weaknesses {
+    @include text-position(300%, 9%, 20px, 0);
+}
+.likes {
+    @include text-position(270%, 58%, 20px, 0);
+}
+.dislikes {
+    @include text-position(300%, 58%, 20px,0);
+}
+.line {
+    @include text-position(265%, 50%, 0, 450px);
+    opacity: 0.5;
+}
+@media screen and (max-width: 600px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px 400px 200px;
+        grid-template-areas:
+        "hd"
+        "mn"
+        "ft"
+        ;
+        background-image: url(../img/backgroundturn.jpg);
+        background-attachment: scroll;
+    }
+    .logo {
+        height: 100px;
+        left: 35%;
+        position: absolute;
+    }
+    #title {
+        font-size: 40px;
+        left: 30%;
+        top: 10%;
+        position: absolute;
+    }
+    #date {
+        font-size: 20px;
+        top: 25%;
+        left: 29%;
+    }
+    #svg  {
+        height: 200px;
+        top: 45%;
+        left: 10%;
+    
+    }
+    .yt-title {
+        top: 70%;
+        left: 24%;
+        font-size: 15px;
+    }
+     .youtube
+     {
+         position: absolute;
+         left: 10%;
+         top: 90%;
+         border: #ffffff solid 1px;
+      }
+    .youtube iframe {
+        height: 204.75px;
+        width: 364px;
+    }
+    .borderbuttom {
+        height: 0px;
+    }
+    .borderbuttom-r {
+        height: 0px;
+    }
+    .bordercorner {
+        height: 0px;
+    }
+    .borderleft {
+        height: 0px;
+    }
+    .borderright {
+        height: 0px;
+    }
+    .bordertop {
+        height: 50px;
+    }
+    .more-info {
+        font-size: 10px;
+        top: 140%;
+        left: 15%;
+    }
+    @mixin font-size ($Fsize, $pT, $pL, $borderB, $borderT, $paddingTB) {
+        font-size: $Fsize;
+        top: $pT;
+        left: $pL;
+        border-bottom: $borderB;
+        border-top: $borderT;
+        padding: $paddingTB;
+    }
+    .title-s {
+      @include font-size(20px, 150%, 39%, #ffffff91 solid 1px, 0, 5px);
+    }
+    .title-e {
+        @include font-size (20px, 190%, 39%, #ffffff91 solid 1px, 0, 5px);
+    }
+    .title-p {
+        @include font-size(20px, 227%, 42%,#ffffff91 solid 1px, 0, 5px);
+    }
+    .text-s {
+        @include font-size(15px, 156%, 24%,  0, 0, 10px);
+        opacity: 0.8;
+    }
+    .text-e {
+        @include font-size(20px, 196%, 45%, 0, 0, 5px);
+    }
+    .text-p {
+        @include font-size(20px, 233%, 43%,  0, 0, 5px);
+    }
+    @mixin position ($imgT, $imgL, $imgH) {
+        height: $imgH;
+        top: $imgT;
+        left: $imgL;
+    }
+    .symbol {
+        @include position (167%, 30%, 100px);
+    }
+    .element {
+        @include position (206%, 36%, 100px);
+    }
+    .planet {
+        @include position (245%, 37%, 100px);
+    }
+    @mixin text-position ($posT, $posL, $Sfont, $imgH) {
+        top: $posT;
+        left: $posL;
+        height: $imgH;
+        font-size: $Sfont;
+    }
+    .strenghts {
+        @include text-position(270%, 9%, 20px, 0);
+    }
+    .weaknesses {
+        @include text-position(300%, 9%, 20px, 0);
+    }
+    .likes {
+        @include text-position(340%, 9%, 20px, 0);
+    }
+    .dislikes {
+        @include text-position(370%, 9%, 20px,0);
+    }
+    .line {
+        @include text-position(0%, 0%, 0, 0px);
+        opacity: 0;
+    }
+
+ }
+ @media screen and (min-width: 1369px) and (max-width: 1920px) {
+    body {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 200px 1250px 400px;
+        grid-template-areas: 
+        "hd hd hd hd hd hd hd hd hd hd hd hd"
+        "mn mn mn mn mn mn mn mn mn mn mn mn"
+        "ft ft ft ft ft ft ft ft ft ft ft ft"
+    }
+    .logo {
+        height: 25%;
+        left: 0.5%;
+        position: absolute;
+    }
+    #title
+    {
+        position: absolute;
+        font-size: 50px;
+        left: 45%;
+        top: 1.5%;
+    }
+    #date {
+        position: absolute;
+         font-size: 30px;
+         left: 43.9%;
+         top: 11.5%;
+        }
+    #svg {
+            height: 350px;
+            position: fixed;
+            top: 25.5%;
+            left: 31%;
+        }
+        .yt-title {
+            top: 75%;
+            left: 39%;
+            font-size: 30px;
+        }
+    .youtube
+         {
+             position: absolute;
+             left: 31%;
+             top: 90%;
+             border: #ffffff solid 1px;
+             margin-bottom: 1px;
+          }
+    .youtube iframe {
+            height: 409.5px;
+            width: 728px;
+            margin-bottom: 1px;
+        }
+    .borderbuttom {
+        background-image: none;
+        height: 0;
+        }
+    .borderleft {
+        background-image: none;
+        height: 0;
+        }
+    .bordercorner {
+        background-image: none;
+        height: 0;
+        }
+    .bordertop {
+        background-image: none;
+        height: 0;
+        }
+    .borderbuttom-r {
+        background-image: none;
+        height: 0;
+        }
+    .borderright {
+        background-image: none;
+        height: 0;
+    }
+    .more-info {
+        top: 170%;
+        left: 29%;
+        font-size: 25px;
+      }
+    .title-s {
+        @include font-size(25px, 185%, 20%, #ffffff91 solid 1px, #ffffff91 solid 1px, 5px);
+        }
+        .title-e {
+          @include font-size (25px, 185%, 48.5%, #ffffff91 solid 1px, #ffffff91 solid 1px, 5px);
+        }
+        .title-p {
+          @include font-size(25px, 185%, 75%,#ffffff91 solid 1px, #ffffff91 solid 1px, 5px);
+        }
+        .text-s {
+          @include font-size(20px, 235%, 17.3%,  #ffffff91 solid 1px, #ffffff91 solid 1px, 10px);
+        }
+        .text-e {
+          @include font-size(25px, 235%, 50.2%,  #ffffff91 solid 1px, #ffffff91 solid 1px, 5px);
+        }
+        .text-p {
+          @include font-size(25px, 235%, 75.1%,  #ffffff91 solid 1px, #ffffff91 solid 1px, 5px);
+        }
+    .symbol {
+      @include position (205%, 18%, 150px);
+    }
+    .element {
+      @include position (205%, 47%, 150px);
+    }
+    .planet {
+      @include position (205%, 75%, 150px);
+    }
+  }
+
+
+ //*.scroll{background: url(../img/scrolll.png);background-repeat: no-repeat;height: 400px;width: 64px;z-index: 100;position: absolute;top: 360%;left: 90%;}
+//*@keyframes play {from {background-position: 8px;}to {background-position: -770px;}}.scroll{animation: play 6s steps(7);}
+//*

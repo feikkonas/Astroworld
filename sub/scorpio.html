@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="cssscorpio/stylescorp.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<script src="http://code.jquery.com/jquery-1.6.4.js"></script>
+<body class="first">
+    <header>
+        <a href="../index.html"> <img class="logo" src="./img/logo.png" alt="logo"></a>
+      <p id="title" class="first">S C O R P I O
+      </p>
+        <p id="date"> 24 / 10 - 22 / 11 </p>
+        <img id="svg" src="./img/scorpio.svg" alt="scorpio">
+        
+
+    </header>
+    <main>
+     <p class="yt-title"> Y E A R L Y &nbsp; H O R O S C O P E</p>
+        <div class="youtube">
+            <iframe src="https://www.youtube.com/embed/a56rr2Bkf7s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <img class="borderbuttom" src="./img/buttom.svg" alt="border">
+        <img class="borderleft" src="./img/leftside.svg" alt="border">
+        <img class="bordercorner" src="./img/lefrcorner.svg" alt="border">
+        <img class="bordertop"src="./img/top.svg" alt="border">
+        <img class="borderbuttom-r" src="./img/rightbuttom.svg" alt="border">
+        <img class="borderright" src="./img/rightside.svg" alt="border">
+    </main>
+    <footer>
+            <p class="more-info"> M O R E &nbsp; I N F O R M A T I O N &nbsp; A B O U T &nbsp;Y O U R &nbsp; Z O D I A C</p>
+         <p class="title-s">Symbol</p>
+         <p class="title-e">Element</p>
+         <p class="title-p">Planet</p>
+         <p class="text-s">The Alchemist</p>
+         <p class="text-e">Water</p>
+         <p class="text-p">Pluto</p>
+        <!--<div class="scroll"></div>-->
+       
+        <img class="symbol" src="./img/scorpio-s.png" alt="symbol">
+        <img class="element" src="./img/water.png" alt="element">
+        <img class="planet" src="./img/pluto.png" alt="planet">
+       <p class="strenghts">Strenghts:
+           <br>
+           <br>
+           Resourceful, brave, passionate, stubborn, <br>
+            a true friend
+       </p>
+       <p class="weaknesses">Weaknesses:
+            <br>
+            <br>
+            Distrusting, jealous, secretive, violent
+            
+        </p>
+        <p class="likes">Likes:
+            <br>
+            <br>
+            Truth, facts, being right, longtime friends, teasing, <br>
+            a grand passion
+        </p>
+        <p class="dislikes">Dislikes:
+            <br>
+            <br>
+            Dishonesty, revealing secrets, passive people
+        </p>
+        <img class="line" src="./img/line.png" alt="line">
+    </footer>
+</body>
+<script>
+    $(document).ready(function() {
+    var movementStrength = 25;
+    var height = movementStrength / $(window).height();
+    var width = movementStrength / $(window).width();
+    $("body").mousemove(function(e){
+              var pageX = e.pageX - ($(window).width() / 2);
+              var pageY = e.pageY - ($(window).height() / 2);
+              var newvalueX = width * pageX * -1 - 25;
+              var newvalueY = height * pageY * -1 - 50;
+              $('body').css("background-position", newvalueX+"px     "+newvalueY+"px");
+    });
+    });
+    </script>
+ 
+    <script>
+    function toggle(){
+$('body').toggleClass('first');
+    }
+    </script>
+    <script>
+    document.getElementById('showHideContainer').onclick = function() {
+    divTest = document.getElementById('#title');
+    if (divTest.style.display === "none") {
+    divTest.style.display = 'block';
+    }
+    else {
+    divTest.style.display = "none";
+     }
+    }
+    </script>
+
+</html>

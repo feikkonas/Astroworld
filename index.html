@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/stylae.css">
+    
+</head>
+<script src="http://code.jquery.com/jquery-1.6.4.js"></script>
+<title>One page</title>
+<link href="css/style.css" type="text/css" rel="stylesheet">
+<script>
+    // Smooth Scroll
+!function(e,t){"function"==typeof define&&define.amd?define("smoothScroll",t(e)):"object"==typeof exports?module.exports=t(e):e.smoothScroll=t(e)}(window||this,function(e){"use strict";var t,n,o,r={},a=!!document.querySelector&&!!e.addEventListener,c={speed:500,easing:"easeInOutCubic",offset:0,updateURL:!0,callbackBefore:function(){},callbackAfter:function(){}},u=function(e,t,n){if("[object Object]"===Object.prototype.toString.call(e))for(var o in e)Object.prototype.hasOwnProperty.call(e,o)&&t.call(n,e[o],o,e);else for(var r=0,a=e.length;a>r;r++)t.call(n,e[r],r,e)},i=function(e,t){var n={};return u(e,function(t,o){n[o]=e[o]}),u(t,function(e,o){n[o]=t[o]}),n},l=function(e,t){for(var n=t.charAt(0);e&&e!==document;e=e.parentNode)if("."===n){if(e.classList.contains(t.substr(1)))return e}else if("#"===n){if(e.id===t.substr(1))return e}else if("["===n&&e.hasAttribute(t.substr(1,t.length-2)))return e;return!1},s=function(e){return Math.max(e.scrollHeight,e.offsetHeight,e.clientHeight)},f=function(e){for(var t,n=String(e),o=n.length,r=-1,a="",c=n.charCodeAt(0);++r<o;){if(t=n.charCodeAt(r),0===t)throw new InvalidCharacterError("Invalid character: the input contains U+0000.");a+=t>=1&&31>=t||127==t||0===r&&t>=48&&57>=t||1===r&&t>=48&&57>=t&&45===c?"\\"+t.toString(16)+" ":t>=128||45===t||95===t||t>=48&&57>=t||t>=65&&90>=t||t>=97&&122>=t?n.charAt(r):"\\"+n.charAt(r)}return a},d=function(e,t){var n;return"easeInQuad"===e&&(n=t*t),"easeOutQuad"===e&&(n=t*(2-t)),"easeInOutQuad"===e&&(n=.5>t?2*t*t:-1+(4-2*t)*t),"easeInCubic"===e&&(n=t*t*t),"easeOutCubic"===e&&(n=--t*t*t+1),"easeInOutCubic"===e&&(n=.5>t?4*t*t*t:(t-1)*(2*t-2)*(2*t-2)+1),"easeInQuart"===e&&(n=t*t*t*t),"easeOutQuart"===e&&(n=1- --t*t*t*t),"easeInOutQuart"===e&&(n=.5>t?8*t*t*t*t:1-8*--t*t*t*t),"easeInQuint"===e&&(n=t*t*t*t*t),"easeOutQuint"===e&&(n=1+--t*t*t*t*t),"easeInOutQuint"===e&&(n=.5>t?16*t*t*t*t*t:1+16*--t*t*t*t*t),n||t},h=function(e,t,n){var o=0;if(e.offsetParent)do o+=e.offsetTop,e=e.offsetParent;while(e);return o=o-t-n,o>=0?o:0},m=function(){return Math.max(document.body.scrollHeight,document.documentElement.scrollHeight,document.body.offsetHeight,document.documentElement.offsetHeight,document.body.clientHeight,document.documentElement.clientHeight)},p=function(e){return e&&"object"==typeof JSON&&"function"==typeof JSON.parse?JSON.parse(e):{}},v=function(t,n){history.pushState&&(n||"true"===n)&&history.pushState(null,null,[e.location.protocol,"//",e.location.host,e.location.pathname,e.location.search,t].join(""))};r.animateScroll=function(t,n,r){var a=i(a||c,r||{}),u=p(t?t.getAttribute("data-options"):null);a=i(a,u),n="#"+f(n.substr(1));var l="#"===n?document.documentElement:document.querySelector(n),g=e.pageYOffset;o||(o=document.querySelector("[data-scroll-header]"));var b,O,y,S=null===o?0:s(o)+o.offsetTop,I=h(l,S,parseInt(a.offset,10)),H=I-g,E=m(),A=0;v(n,a.updateURL);var L=function(o,r,c){var u=e.pageYOffset;(o==r||u==r||e.innerHeight+u>=E)&&(clearInterval(c),l.focus(),a.callbackAfter(t,n))},Q=function(){A+=16,O=A/parseInt(a.speed,10),O=O>1?1:O,y=g+H*d(a.easing,O),e.scrollTo(0,Math.floor(y)),L(y,I,b)},C=function(){a.callbackBefore(t,n),b=setInterval(Q,16)};0===e.pageYOffset&&e.scrollTo(0,0),C()};var g=function(e){var n=l(e.target,"[data-scroll]");n&&"a"===n.tagName.toLowerCase()&&(e.preventDefault(),r.animateScroll(n,n.hash,t))},b=function(){n||(n=setTimeout(function(){n=null,headerHeight=null===o?0:s(o)+o.offsetTop},66))};return r.destroy=function(){t&&(document.removeEventListener("click",g,!1),e.removeEventListener("resize",b,!1),t=null,n=null,o=null)},r.init=function(n){a&&(r.destroy(),t=i(c,n||{}),o=document.querySelector("[data-scroll-header]"),document.addEventListener("click",g,!1),o&&e.addEventListener("resize",b,!1))},r});
+
+
+
+// - 1366x625 resolution -
+// - only sub pages responsive for mobile, tablets or bigger resolution monitors -
+
+
+
+smoothScroll.init({
+speed: 1000,
+easing: 'easeInOutCubic',
+offset: 0,
+updateURL: true,
+callbackBefore: function ( toggle, anchor ) {},
+callbackAfter: function ( toggle, anchor ) {}
+});
+</script>
+
+
+
+
+<body>
+        <nav data-scroll-header>
+			
+			</nav>
+            <nav data-scroll-header>
+    <section id="pageA">
+        <div id="wow">
+        </div>
+        <div id="logo">
+            </div>
+            <div id="text">
+                <p>     Discover the world of astrology with us </p>
+            </div>
+            <div id="arrowa"><a data-scroll href="#pageB">
+                <img src="./img/arrow.png" height="28" width="108"></img></a>
+            </div>
+            </nav>
+    </section>
+<nav>
+    <section id="pageB">
+            <div id="text3">
+                    <p>Y E A R L Y  H O R O S C O P E S</p>
+                </div>
+            <div id="wowb">
+                </div>
+            <div id="whatisastrology">
+                    <p> what is astrology? </p>
+                </div>
+                <div id="whatisdescription">
+                    <p> Astrology is the study about planets and stars positions, alignments, motions and their impact on human lives. <br>
+                        It is believed that the alignment of the sun, stars and planets at the time of birth, <br> 
+                        contribute to their personality and even has an effect on relationships.<br>
+                        <br>
+                        Most people already have an idea about astrology, even without knowing. <br>  
+                        Zodiac signs and horoscopes are a good example of that. <br>
+                        Interested in what your zodiac sign says about you?  </p>
+                </div>
+                <div id="arrow"><a data-scroll href="#pageC">
+                    <img src="./img/arrow.png" height="28" width="108"></img></a>
+                </div>
+      
+                            <img id="aquarius" src="./img/aquarius.svg"></img>
+                            <img id="pisces" src="./img/pisces.svg"></img>
+                            <img id="capricorn" src="./img/capricorn.svg"></img>
+                            <img id="aries" src="./img/aries.svg"></img>
+                            <img id="sagittarius" src="./img/sagittarius.svg"></img>
+                            <img id="scorpio" src="./img/scorpio.svg"></img>
+                            <img id="gemini" src="./img/gemini.svg"></img>
+                            <img id="cancer" src="./img/cancer.svg"></img>
+                            <img id="leo" src="./img/leo.svg"></img>
+                            <img id="libra" src="./img/libra.svg"></img>
+                            <img id="taurus" src="./img/taurus.svg"></img>
+                            <img id="virgo" src="./img/virgo.svg"></img>
+
+            </nav>
+    </section>
+
+    <nav>
+        <section id="pageC">
+            
+                <div id="wheel">
+                        <img src="./img/circle.png" alt="circle" height="501" width="519">
+                    </div>
+                       
+                   <a class="circle-aries" href="./sub/ariess.html"> <p>A R I E S <br>
+                <br>                21 / 05 - 19 / 04
+                        </p>
+            </a>
+            <a class="circle-pisces" href="./sub/piscess.html"> <p>P I S C E S <br>
+                <br>                19 / 02 - 20 / 03
+                        </p>
+            </a>
+            <a class="circle-taurus" href="./sub/tauruss.html"> <p>T A U R U S <br>
+                <br>                20 / 04 - 21 / 05
+                        </p>
+            </a>
+            <a class="circle-gemini" href="./sub/geminii.html"> <p>G E M I N I <br>
+                <br>                21 / 05 - 21 / 06
+                        </p>
+            </a>
+            <a class="circle-cancer" href="./sub/cancerr.html"> <p>C A N C E R <br>
+                <br>                21 / 06 - 22 / 07
+                        </p>
+            </a>
+            <a class="circle-leo" href="./sub/leoo.html"> <p>L E O <br>
+                <br>                22 / 07 - 23 / 08
+                        </p>
+            </a>
+            <a class="circle-aquarius" href="./sub/aquariuss.html"> <p>A Q U A R I U S <br>
+                <br>                20 / 01 - 18 / 02
+                        </p>
+            </a>
+            <a class="circle-capricorn" href="./sub/capricornn.html"> <p>C A P R I C O R N <br>
+                <br>                21 / 12 - 20 / 01
+                        </p>
+            </a>
+            <a class="circle-sagittarius" href="./sub/sagittarius.html"> <p>S A G I T T A R I U S <br>
+                <br>                22 / 11 - 21 / 12
+                        </p>
+            </a>
+            <a class="circle-scorpio" href="./sub/scorpio.html"> <p>S C O R P I O <br>
+                <br>                23 / 10 - 22 / 11
+                        </p>
+            </a>
+            <a class="circle-libra" href="./sub/libraa.html"> <p>L I B R A <br>
+                <br>                23 / 09 - 23 / 10
+                        </p>
+            </a>
+            <a class="circle-virgo" href="./sub/virgoo.html"> <p>V I R G O <br>
+                <br>                23 / 08 - 23 / 09
+                        </p>
+            </a>
+
+            <div id="arrowas"><a data-scroll href="#pageD">
+                <img src="./img/arrow.png" height="28" width="108"></img></a>
+            </div>
+        </nav>
+        </section>
+            
+    <nav>
+            <section id="pageD"> 
+                    <div id="whattt">
+                            <p> who are we? </p>
+                        </div>
+                        <div id="whatttt">
+                                <p>     At Astroworld we love astrology, that’s why we are making it accessible for you! <br>
+                                    With many years of experience we are ready to bring you the latest info about your horoscope. <br>
+                                    Our research is supported by astrologist, who observe the alignment of the stars and planets.<br>
+                                   Based on their findings we create an as accurate as possible indication about your yearly horoscope.<br>
+                                   Interactive, informative, accessible and fun, that’s what we at Astroworld are all about. <br>
+                                   Enjoy the stories of the stars where you play the main role. </p>
+                        </div>
+                        <div id="yy">
+                            <p> Youssef </p>
+                        </div>
+                        <div id="kk">
+                            <p> Krista </p>
+                        </div>
+                        <div id="zz">
+                            <p> Zuzana </p>
+                        </div>
+                        <div id="nn">
+                            <p> Nedas </p>
+                        </div>
+                        <div id="yylogo">
+                            <img src="./img/virgo-s.png" height="80" width="60">
+                        </div>
+                        <div id="kklogo">
+                            <img src="./img/leo-s.png" height="80" width="80">
+                        </div>
+                        <div id="zzlogo">
+                            <img src="./img/sagittarius-s.png" height="80" width="80">
+                        </div>
+                        <div id="nnlogo">
+                            <img src="./img/gemini-s.png" height="80" width="80">
+                        </div>
+                        <a href="index.html"> <img class="logo1" src="./img/logo.png" alt="logo11"></a>
+                        <div id="arrowford"><a data-scroll href="#pageE">
+                            <img src="./img/arrow.png" height="28" width="108"></img></a>
+                        </div>
+            </nav>
+            </section>
+
+        <nav>
+            <section id="pageE">
+                    <div id="Contact">
+                            <p>Contact</p>
+                    </div>
+                <a href="*+4576133200"><img class="phone" src="./img/mobile.png" height="130" width="71" alt="phone"></img></a>
+                <a href="mailto:email:astroworldastroworld@gmail.com?Subject=Hello%20again" target="_top"><img class="email" src="./img/mail.png" height="129" width="130" alt="phone"></img></a> 
+                <a href="https://www.youtube.com/channel/UCKruIa5Hnrkkp0ZO8XbwkwQ/videos?view_as=subscriber"><img class="youtube" src="./img/youtube.png" height="100" width="142" alt="phone"></img></a> 
+                <a href="https://www.facebook.com/Astroworld-561539584668852/?modal=admin_todo_tour"><img class="fbicon" src="./img/fbicon.png" height="105" width="105" alt="phone"></img></a> 
+                <a href="https://www.instagram.com/astro.world.z/?hl=en&fbclid=IwAR3C5LPq9ucBig7pbcfgo667bBPu7-_FPZ5gNwZNwHm9onEgryFQSCI2lOo"><img class="igicon" src="./img/igicon.png" height="106" width="106" alt="phone"></img></a> 
+                    <div class="logotipas"><a data-scroll href="#pageA">
+                            <img src="./img/logo.png" height="166" width="201"></img></a>
+                        </div>
+            </nav>
+            </section>
+
+</body>
+
+<script>
+$(document).ready(function() {
+var movementStrength = 25;
+var height = movementStrength / $(window).height();
+var width = movementStrength / $(window).width();
+$("#wow").mousemove(function(e){
+          var pageX = e.pageX - ($(window).width() / 2);
+          var pageY = e.pageY - ($(window).height() / 2);
+          var newvalueX = width * pageX * -1 - 25;
+          var newvalueY = height * pageY * -1 - 50;
+          $('#wow').css("background-position", newvalueX+"px     "+newvalueY+"px");
+});
+});
+</script>
+</html>
